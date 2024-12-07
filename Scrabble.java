@@ -154,14 +154,13 @@ public class Scrabble {
 			//// Replace the following break statement with code
 			//// that completes the hand playing loop
 
-			if (!isWordInDictionary(input))
+			if (!isWordInDictionary(input)) {
 				System.out.println("No such word in the dictionary.Try again.\n");
 
-			else if (!subsetOf(input,hand))
+			} else if (!subsetOf(input,hand)) {
 				System.out.println("Invalid word. Try again.");
 
-			if (subsetOf(input,hand) && isWordInDictionary(input))
-			{
+			} else {
 				score = score + wordScore(input);
 				hand = MyString.remove(hand, input);
 				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points\n");
