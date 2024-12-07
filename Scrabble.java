@@ -154,11 +154,11 @@ public class Scrabble {
 			//// Replace the following break statement with code
 			//// that completes the hand playing loop
 
-			if (!isWordInDictionary(input)) {
-				System.out.println("No such word in the dictionary.Try again.\n");
+			if (!subsetOf(input,hand)) {
+			System.out.println("Invalid word. Try again.");
 
-			} else if (!subsetOf(input,hand)) {
-				System.out.println("Invalid word. Try again.");
+			} else if (!isWordInDictionary(input)) {
+				System.out.println("No such word in the dictionary.Try again.\n");
 
 			} else {
 				score = score + wordScore(input);
