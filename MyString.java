@@ -11,6 +11,7 @@ public class MyString {
         System.out.println(spacedString(hello));
         //// Put your other tests here.
 
+        
         System.out.println(insertRandomly('*',hello));
     }
 
